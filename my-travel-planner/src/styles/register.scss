@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.register-form{
+  background-color: $main-color;
+  border-radius: 10px;
+  padding: 30px 10px ;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 50%;
+  height: 40vh;
+  margin: 0 auto;
+
+  .register-form--label{
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+  }
+  .register-form--error{
+    margin-top: 2px;
+    color: $error-color;
+    font-family: cursive, serif;
+  }
+  .register-form--input-group{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+
+  }
+}
