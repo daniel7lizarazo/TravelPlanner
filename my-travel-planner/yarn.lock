@@ -1191,6 +1191,39 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz#d5e0706cf8c6acd8c6032f8d54070af261bbbb2f"
   integrity sha512-ws57AidsDvREKrZKYffXddNkyaF14iHNHm8VQnZH6t99E8gczjNN0GpvcGny0imC80yQ0tHz1xVUKk/KFQSUyA==
 
+"@firebase/app@^0.7.26":
+  version "0.7.26"
+  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.7.26.tgz#56ce15a52d67000c5c44355a8ec5b0ad697a908c"
+  integrity sha512-FmJ4uaUyazmOZZWJO9OviKfnw+lrwMPQbWBMutymSQT8Gx783Ddnhs5IdmfV0NeLrlGy4ZwfP6/+RJyy2wGDXw==
+  dependencies:
+    "@firebase/component" "0.5.15"
+    "@firebase/logger" "0.3.3"
+    "@firebase/util" "1.6.1"
+    idb "7.0.1"
+    tslib "^2.1.0"
+
+"@firebase/component@0.5.15":
+  version "0.5.15"
+  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.5.15.tgz#5ceaf3c3f2e495a5ac65b2b41354ca6d44e33f88"
+  integrity sha512-VRnZxmvtJmXupTPg37LxM0zdyMN54EXkmsFD4x5Bm4eZUay9VGnhfiGnE3m9Af/2hnURA2idIBN/23L6982iPQ==
+  dependencies:
+    "@firebase/util" "1.6.1"
+    tslib "^2.1.0"
+
+"@firebase/logger@0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.3.3.tgz#0f724b1e0b166d17ac285aac5c8ec14d136beed4"
+  integrity sha512-POTJl07jOKTOevLXrTvJD/VZ0M6PnJXflbAh5J9VGkmtXPXNG6MdZ9fmRgqYhXKTaDId6AQenQ262uwgpdtO0Q==
+  dependencies:
+    tslib "^2.1.0"
+
+"@firebase/util@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-1.6.1.tgz#203e7e5f95d91b42b042e9d9e21472ad2bfcdb44"
+  integrity sha512-+eDE6uG5GgvXYHbAzfP1mpJUX1VDBD+A8CjBeBoNAKAVAApMSDxDODqRcOq7NW7kFJXSUkMzDJWhnUIifX2R8w==
+  dependencies:
+    tslib "^2.1.0"
+
 "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
@@ -3585,6 +3618,11 @@ icss-utils@^5.0.0, icss-utils@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-5.1.0.tgz#c6be6858abd013d768e98366ae47e25d5887b1ae"
   integrity sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==
+
+idb@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/idb/-/idb-7.0.1.tgz#d2875b3a2f205d854ee307f6d196f246fea590a7"
+  integrity sha512-UUxlE7vGWK5RfB/fDwEGgRf84DY/ieqNha6msMV99UsEMQhJ1RwbCd8AYBj3QMgnE3VZnfQvm4oKVCJTYlqIgg==
 
 ieee754@^1.1.13:
   version "1.2.1"

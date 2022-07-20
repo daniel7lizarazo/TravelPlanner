@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IPeople } from '../interfaces/IPeople';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  // @Input()
+  // clearForm = new EventListener();
+
   constructor() { }
+
+  register = {} as IPeople;
+
+  littleMessage? : string;
+
+  myName = this.register.name;
 
   ngOnInit(): void {
   }
 
+  clearForm(emittedMessage : string){
+    this.register = {} as IPeople;
+    this.littleMessage = emittedMessage;
+  }
+
+  registerUser = () =>{
+    // this.troop.push(this.register);
+  }
 }

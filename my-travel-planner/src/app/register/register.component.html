@@ -1,1 +1,34 @@
-<p>register works!</p>
+<form class="register-form" (ngSubmit)="registerUser()" #myForm="ngForm">
+  <div class="register-form--input-group">
+    <label class="register-form--label" for="name">Name</label>
+    <input type="text" name="name" required
+    #name="ngModel"
+    [(ngModel)]="register.name">
+    <p *ngIf="name.invalid && (name.dirty || name.touched)" class="register-form--error">Error</p>
+  </div>
+  <div class="register-form--input-group">
+    <label class="register-form--label" for="email">Email</label>
+    <input type="text" name="email" required
+    #email="ngModel"
+    [(ngModel)]="register.email">
+    <p *ngIf="email.invalid && (email.dirty || email.touched)" class="register-form--error">Error</p>
+  </div>
+  <div class="register-form--input-group">
+    <label class="register-form--label" for="DOB">DOB</label>
+    <input type="date" name="DOB" required
+    #dbo="ngModel"
+    [(ngModel)]="register.DOB">
+    <p *ngIf="dbo.invalid && (dbo.dirty || dbo.touched)" class="register-form--error">Error</p>
+  </div>
+  <div class="register-form--input-group">
+    <label class="register-form--label" for="city">City</label>
+    <input type="text" name="city" required
+    #city="ngModel"
+    [(ngModel)]="register.city">
+    <p *ngIf="city.invalid && (city.dirty || city.touched)" class="register-form--error">Error</p>
+  </div>
+  <span [hidden]="!littleMessage">{{littleMessage}}</span>
+  <button type="submit" [disabled]="myForm.invalid">Register</button>
+  <button type="button" (click)="clearForm('Chaos')">Clear</button>
+</form>
+

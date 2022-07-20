@@ -1,1 +1,8 @@
-@import '../styles/profile.scss'
+@import '../styles/profile.scss';
+@import '../styles/navigation.scss';
+
+body {
+  display: grid;
+  grid-template-rows: .5fr 5fr;
+  row-gap: 5vh;
+}

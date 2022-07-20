@@ -5,11 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfilePreviewComponent } from './profile-preview/profile-preview.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfilePreviewComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +21,6 @@ import { RegisterComponent } from './register/register.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NavigationComponent]
 })
 export class AppModule { }

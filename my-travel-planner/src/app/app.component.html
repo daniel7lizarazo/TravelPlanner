@@ -1,47 +1,8 @@
-<h1 >Form</h1>
-<form class="register-form" (ngSubmit)="registerUser()" #myForm="ngForm">
-  <div class="register-form--input-group">
-    <label class="register-form--label" for="name">Name</label>
-    <input type="text" name="name" required
-    #name="ngModel"
-    [(ngModel)]="register.name">
-    <p *ngIf="name.invalid && (name.dirty || name.touched)" class="register-form--error">Error</p>
+<body>
+  <div>
+    <app-navigation></app-navigation>
   </div>
-  <div class="register-form--input-group">
-    <label class="register-form--label" for="email">Email</label>
-    <input type="text" name="email" required
-    #email="ngModel"
-    [(ngModel)]="register.email">
-    <p *ngIf="email.invalid && (email.dirty || email.touched)" class="register-form--error">Error</p>
+  <div>
+    <router-outlet></router-outlet>
   </div>
-  <div class="register-form--input-group">
-    <label class="register-form--label" for="DOB">DOB</label>
-    <input type="date" name="DOB" required
-    #dbo="ngModel"
-    [(ngModel)]="register.DOB">
-    <p *ngIf="dbo.invalid && (dbo.dirty || dbo.touched)" class="register-form--error">Error</p>
-  </div>
-  <div class="register-form--input-group">
-    <label class="register-form--label" for="city">City</label>
-    <input type="text" name="city" required
-    #city="ngModel"
-    [(ngModel)]="register.city">
-    <p *ngIf="city.invalid && (city.dirty || city.touched)" class="register-form--error">Error</p>
-  </div>
-  <button type="submit" [disabled]="myForm.invalid">Register</button>
-  <button type="button">Clear</button>
-</form>
-<h1>Profile</h1>
-<div class="users-profiles">
-  <div *ngFor="let user of troop"
-    class="users-profiles--profile-card" >
-    <img *ngIf="!!user.profilePicture else defaultProfilePic" class="users-profiles--img" [src]="user.profilePicture"/>
-    <ng-template #defaultProfilePic>
-      <img class="users-profiles--img" src="../assets/img/defaultProfilePic.jpg"/>
-    </ng-template>
-
-    <h2 class="users-profiles--user-name">{{user.name}}</h2>
-    <p>Email: {{user.email}}</p>
-    <span>{{user.city}}</span>
-  </div>
-</div>
+</body>
