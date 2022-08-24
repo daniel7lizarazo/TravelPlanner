@@ -3,7 +3,11 @@
   <nav>
     <img src="../../assets/img/logo.png">
     <div class="navigation__desktop--pages">
-      <a routerLink="/profiles">Users</a>
+      <a routerLink="/users">Users</a>
+      <div class="navigation__desktop--friends">
+        <a routerLink="/users">Friends</a>
+        <span class="navigation__desktop--numberOfFriends">{{numberOfFriends}}</span>
+      </div>
     </div>
     <div class="navigation__desktop--utilities">
       <div class="navigation__desktop--register">
@@ -32,7 +36,7 @@
       </li>
       <li>
         <div>
-          <a routerLink="/profiles">
+          <a routerLink="/users">
               <img src="../../assets/img/user_logo.png" alt="user logo">
           </a>
         </div>

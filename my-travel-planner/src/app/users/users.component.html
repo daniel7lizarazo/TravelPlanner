@@ -1,0 +1,7 @@
+<div class="users-profiles">
+  <app-profile-preview
+    *ngFor="let user of users"
+    [setUser]="user"
+    (addFriend)="addFriend($event)">
+  </app-profile-preview>
+</div>

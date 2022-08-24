@@ -1,14 +1,10 @@
-<div class="users-profiles">
-  <div *ngFor="let user of troop"
-    class="users-profiles--profile-card" >
-    <img *ngIf="!!user.profilePicture else defaultProfilePic" class="users-profiles--img" [src]="user.profilePicture"/>
-    <ng-template #defaultProfilePic>
-      <img class="users-profiles--img" src="../assets/img/defaultProfilePic.jpg"/>
-    </ng-template>
-
-    <h2 class="users-profiles--user-name">{{user.name}}</h2>
-    <p>Email: {{user.email}}</p>
-    <span>{{user.city}}</span>
-  </div>
+<div class="users-profiles--profile-card">
+  <img *ngIf="!!setUser.profilePicture else defaultProfilePic" class="users-profiles--img" [src]="setUser.profilePicture"/>
+  <ng-template #defaultProfilePic>
+    <img class="users-profiles--img" src="../assets/img/defaultProfilePic.jpg"/>
+  </ng-template>
+  <h2 class="users-profiles--user-name">{{setUser.name}}</h2>
+  <p>Email: {{setUser.email}}</p>
+  <p>{{setUser.city}}</p>
+  <button class="users-profiles--addFirndBtn" (click)="addNewFriend()">Add friend</button>
 </div>
-

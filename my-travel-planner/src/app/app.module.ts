@@ -7,20 +7,23 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfilePreviewComponent } from './profile-preview/profile-preview.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { UsersComponent } from './users/users.component';
+import { DataServiceService } from './Services/data-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     ProfilePreviewComponent,
-    NavigationComponent
+    NavigationComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent, NavigationComponent]
 })
 export class AppModule { }

@@ -8,11 +8,6 @@ import { IPeople } from '../interfaces/IPeople';
 })
 export class RegisterComponent implements OnInit {
 
-  // @Input()
-  // clearForm = new EventListener();
-
-  constructor() { }
-
   register = {} as IPeople;
 
   littleMessage? : string;

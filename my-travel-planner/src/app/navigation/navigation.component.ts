@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DataServiceService } from '../Services/data-service.service';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  providers: [DataServiceService]
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnDestroy {
 
-  constructor() { }
+  numberOfFriends : number = 0;
+  subscription : Subscription;
 
-  ngOnInit(): void {
+  constructor(private dataService : DataServiceService) {
+    this.subscription = this.dataService.$numberOfFriends.subscribe( _numberOfFriends => {
+      this.numberOfFriends = _numberOfFriends;
+      console.log(_numberOfFriends);
+    })
+   }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }

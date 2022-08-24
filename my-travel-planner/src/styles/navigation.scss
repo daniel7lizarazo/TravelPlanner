@@ -17,7 +17,7 @@
     margin-left: 10px;
     margin-right: 10px;
     margin: 5px;
-    height: 8vh;
+    height: 7vh;
   }
 
   .navigation__desktop--pages{
@@ -27,6 +27,15 @@
     padding: .5em;
     margin: .4em;
     border-radius: .2em;
+    gap: .8em;
+    .navigation__desktop--numberOfFriends{
+      background-color: red;
+      height: 2em;
+      width: 2em;
+      border-radius: 50%;
+      font-size: .8em;
+
+    }
     a{
       align-self: center;
       justify-self: center;
@@ -35,17 +44,17 @@
     }
   }
 
-  .navigation__desktop--pages:hover a{
+  .navigation__desktop--pages a :hover a{
     color: $secondary-color;
   }
 
-  .navigation__desktop--pages:hover {
+  .navigation__desktop--pages a :hover {
     background-color: $primary-color;
   }
 
   .navigation__desktop--utilities{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5.5em 4.2em;
     gap: .5em;
     .navigation__desktop--register{
       margin: .4em;
